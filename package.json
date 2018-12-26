@@ -1,0 +1,84 @@
+{
+  "name": "colossus-styled-components",
+  "version": "0.0.0-semantic-release",
+  "description": "Primitive react styled components that anyone would ever need",
+  "scripts": {
+    "start": "docz dev",
+    "test": "jest --passWithNoTests",
+    "build": "cross-env NODE_ENV=development webpack --config build/webpack.config.js --progress",
+    "build:watch": "cross-env NODE_ENV=development webpack --config build/webpack.config.js --progress --watch",
+    "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js --progress",
+    "coverage": "jest --coverage",
+    "lint": "tslint **/**.ts? --fix",
+    "pretty": "prettier --write",
+    "precommit": "lint-staged",
+    "prepush": "npm run test",
+    "docz:build": "docz build"
+  },
+  "main": "index.js",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm test",
+      "npm run pretty",
+      "npm run lint",
+      "git add"
+    ],
+    "*.{scss,json,md,js,jsx,mdx}": [
+      "npm run pretty",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameerthehacker/colossus.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "ameerthehacker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ameerthehacker/colossus/issues"
+  },
+  "homepage": "https://github.com/ameerthehacker/colossus#readme",
+  "devDependencies": {
+    "@emotion/core": "^10.0.5",
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "autoprefixer": "^9.1.5",
+    "copy-webpack-plugin": "^4.6.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "docz": "^0.13.5",
+    "docz-theme-default": "^0.13.5",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "file-loader": "^2.0.0",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.15.3",
+    "react": "^16.5.2",
+    "ts-jest": "^23.10.0",
+    "ts-loader": "^5.1.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.4"
+  },
+  "peer-dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.7.0"
+  }
+}
