@@ -24,7 +24,7 @@
       "npm run lint",
       "git add"
     ],
-    "*.{scss,json,md,js,jsx,mdx}": [
+    "*.{scss,json,md,js,jsx,mdx,yml}": [
       "npm run pretty",
       "git add"
     ]

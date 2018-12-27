@@ -1,0 +1,44 @@
+version: 2
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - test_build_deploy
+
+jobs:
+  test_build_deploy:
+    docker:
+      - image: circleci/node:8.9
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run:
+          name: Install dependencies
+          command: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run:
+          name: Run tests
+          command: npm run test
+
+      # run code coverage
+      - run:
+          name: Code coverage report
+          command: NODE_ENV=CI npm run coverage
+
+      - run:
+          name: Build Docz
+          command: npm run docz:build
