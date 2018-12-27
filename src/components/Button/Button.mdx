@@ -1,18 +1,47 @@
 ---
 name: Button
-menu: Component
+menu: Components
 route: /components/button
 ---
 
 import Button from "./Button";
 import { Playground, PropsTable } from "docz";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "../../theme";
 
 # Button
 
 ## Basic Usage
 
+You can use the **variant** prop to change the look of the button
+
+<Button>Primary</Button>&nbsp;
+<Button variant='secondary'>Secondary</Button>&nbsp;
+<Button variant='success'>Success</Button>&nbsp;
+<Button variant='warning'>Warning</Button>&nbsp;
+<Button variant='danger'>Danger</Button>&nbsp;
+
+## Sizes
+
+You can use the **sz** prop to change the size of the button
+
+<Button sz='sm'>Small</Button>&nbsp;
+<Button sz='md'>Medium</Button>&nbsp;
+<Button sz='lg'>Large</Button>&nbsp;
+
+## Playground
+
 <Playground>
-  <Button>Click Me!</Button>
+  <Button
+    variant="success"
+    onClick={() => {
+      alert("Hey! you clicked me");
+    }}
+  >
+    Click Me!
+  </Button>
 </Playground>
+
+## Props
 
 <PropsTable of={Button} />
