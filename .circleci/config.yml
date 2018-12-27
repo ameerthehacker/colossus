@@ -40,5 +40,9 @@ jobs:
           command: NODE_ENV=CI npm run coverage
 
       - run:
+          name: Upload coverage report
+          command: ./node_modules/codecov/bin/codecov
+
+      - run:
           name: Build Docz
           command: npm run docz:build
