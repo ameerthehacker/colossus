@@ -69,3 +69,6 @@ coverage
 # Docz
 .docz
 docz
+
+#firebase
+.firebase

@@ -46,3 +46,7 @@ jobs:
       - run:
           name: Build Docz
           command: npm run docz:build
+
+      - run:
+          name: Deploy to firebase
+          command: ./node_modules/firebase-tools/lib/bin/firebase.js deploy --token "$FIREBASE_TOKEN"
