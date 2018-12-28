@@ -1,7 +1,7 @@
 export const colors = {
   contrast: "#ECF0F1",
   danger: "#E74C3C",
-  primary: "#2C3E50",
+  primary: "#0984e3",
   secondary: "#34495E",
   success: "#27AE60",
   warning: "#E67E22",
