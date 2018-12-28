@@ -35,7 +35,7 @@ export const buttons = {
       color: colors.contrast,
     },
     "backgroundColor": "white",
-    "border": `2px solid ${colors.danger}`,
+    "border": `${border[1]}px solid ${colors.danger}`,
     "color": colors.danger,
   },
   "primary": {
@@ -52,7 +52,7 @@ export const buttons = {
       color: colors.contrast,
     },
     "backgroundColor": "white",
-    "border": `2px solid ${colors.primary}`,
+    "border": `${border[1]}px solid ${colors.primary}`,
     "color": colors.primary,
   },
   "secondary": {
@@ -69,7 +69,7 @@ export const buttons = {
       color: colors.contrast,
     },
     "backgroundColor": "white",
-    "border": `2px solid ${colors.secondary}`,
+    "border": `${border[1]}px solid ${colors.secondary}`,
     "color": colors.secondary,
   },
   "success": {
@@ -86,7 +86,7 @@ export const buttons = {
       color: colors.contrast,
     },
     "backgroundColor": "white",
-    "border": `2px solid ${colors.success}`,
+    "border": `${border[1]}px solid ${colors.success}`,
     "color": colors.success,
   },
   "warning": {
@@ -103,7 +103,7 @@ export const buttons = {
       color: colors.contrast,
     },
     "backgroundColor": "white",
-    "border": `2px solid ${colors.warning}`,
+    "border": `${border[1]}px solid ${colors.warning}`,
     "color": colors.warning,
   },
 };
