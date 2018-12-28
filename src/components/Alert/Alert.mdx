@@ -21,10 +21,24 @@ You can use the **variant** prop to change the look of the button
 <Alert variant="warning">This is a warning alert</Alert><br/>
 <Alert variant="danger">This is a danger alert</Alert><br/>
 
+## Dismissible Alert
+
+You can use the **dismissible** prop to make an alert dismissble
+
+<Alert dismissible={true} variant="warning">You can dismiss this warning safely!</Alert><br/>
+
 ## Playground
 
 <Playground>
-  <Alert variant="success">Hi! I'm an alert</Alert>
+  <Alert
+    dismissible={true}
+    onDismiss={() => {
+      alert("You dismissed an alert!");
+    }}
+    variant="success"
+  >
+    Hi! I'm an alert
+  </Alert>
 </Playground>
 
 ## Props
