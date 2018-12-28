@@ -38,13 +38,13 @@ export const AlertCloseBtnStyled = styled("span")`
   cursor: pointer;
 `;
 
-AlertStyled.defaultProps = {
-  dismissible: false,
-  theme: defaultTheme,
-  variant: "primary",
-};
-
 export default class Alert extends React.Component<IAlertProps, IAlertState> {
+  public static defaultProps = {
+    dismissible: false,
+    theme: defaultTheme,
+    variant: "primary",
+  };
+
   constructor(props: IAlertProps) {
     super(props);
     this.state = { isVisible: true };
