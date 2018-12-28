@@ -23,4 +23,18 @@ describe("Alert", () => {
 
     expect(cb).toBeCalled();
   });
+
+  it("should render the close button when isDismissible is true", () => {
+    const component = mount(<Alert dismissible={true} />);
+    const alertCloseBtnComponent = component.find(AlertCloseBtnStyled);
+
+    expect(alertCloseBtnComponent.exists()).toBeTruthy();
+  });
+
+  it("should not render the close button when isDismissible is false", () => {
+    const component = mount(<Alert dismissible={false} />);
+    const alertCloseBtnComponent = component.find(AlertCloseBtnStyled);
+
+    expect(alertCloseBtnComponent.exists()).toBeFalsy();
+  });
 });
