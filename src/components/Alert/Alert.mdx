@@ -1,0 +1,32 @@
+---
+name: Alert
+menu: Components
+route: /components/alert
+---
+
+import Alert from "./Alert";
+import { Playground, PropsTable } from "docz";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "../../theme";
+
+# Alert
+
+## Basic Usage
+
+You can use the **variant** prop to change the look of the button
+
+<Alert>This is a primary alert</Alert><br/>
+<Alert variant="secondary">This is a secondary alert</Alert><br/>
+<Alert variant="success">This is a success alert</Alert><br/>
+<Alert variant="warning">This is a warning alert</Alert><br/>
+<Alert variant="danger">This is a danger alert</Alert><br/>
+
+## Playground
+
+<Playground>
+  <Alert variant="success">Hi! I'm an alert</Alert>
+</Playground>
+
+## Props
+
+<PropsTable of={Alert} />

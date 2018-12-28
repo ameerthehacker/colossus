@@ -1,3 +1,4 @@
+import { alerts } from "./alert";
 import { buttons, buttonSizes } from "./button";
 import { colors, space } from "./variables";
 
@@ -16,6 +17,7 @@ export interface ITheme {
 }
 
 export const defaultTheme = {
+  alerts,
   buttonSizes,
   buttons,
   colors,
