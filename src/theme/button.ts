@@ -26,6 +26,7 @@ export const buttons = {
       backgroundColor: lighten(colorLightener, colors.danger),
     },
     "backgroundColor": colors.danger,
+    "border": 0,
     "color": colors.contrast,
   },
   "danger-outline": {
@@ -42,6 +43,7 @@ export const buttons = {
       backgroundColor: lighten(colorLightener, colors.primary),
     },
     "backgroundColor": colors.primary,
+    "border": 0,
     "color": colors.contrast,
   },
   "primary-outline": {
@@ -58,6 +60,7 @@ export const buttons = {
       backgroundColor: lighten(colorLightener, colors.secondary),
     },
     "backgroundColor": colors.secondary,
+    "border": 0,
     "color": colors.contrast,
   },
   "secondary-outline": {
@@ -74,6 +77,7 @@ export const buttons = {
       backgroundColor: lighten(colorLightener, colors.success),
     },
     "backgroundColor": colors.success,
+    "border": 0,
     "color": colors.contrast,
   },
   "success-outline": {
@@ -90,6 +94,7 @@ export const buttons = {
       backgroundColor: lighten(colorLightener, colors.warning),
     },
     "backgroundColor": colors.warning,
+    "border": 0,
     "color": colors.contrast,
   },
   "warning-outline": {

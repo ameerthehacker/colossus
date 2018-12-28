@@ -12,17 +12,6 @@ import styled from "../../styled-components";
 import { defaultTheme, ITheme } from "../../theme";
 
 interface IButtonProps {
-  bg?: "primary" | "secondary" | "warning" | "danger" | "success" | "contrast";
-  color?:
-    | "primary"
-    | "secondary"
-    | "warning"
-    | "danger"
-    | "success"
-    | "contrast";
-  border?: number;
-  p?: number;
-  borderRadius?: number;
   variant?: "primary" | "secondary" | "warning" | "danger" | "success";
   theme?: ITheme;
   sz?: string;
@@ -35,21 +24,11 @@ const buttonSizes = variant({
 });
 
 const ButtonStyled = styled("button")<IButtonProps>`
-  ${background}
-  ${color}
-  ${border}
-  ${space}
-  ${borderRadius}
   ${buttonStyle}
   ${buttonSizes}
 `;
 
 ButtonStyled.defaultProps = {
-  bg: "primary",
-  border: 0,
-  borderRadius: 5,
-  color: "contrast",
-  p: 5,
   sz: "md",
   theme: defaultTheme,
   variant: "primary",
