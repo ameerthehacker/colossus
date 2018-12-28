@@ -1,13 +1,5 @@
 import * as React from "react";
-import {
-  background,
-  border,
-  borderRadius,
-  buttonStyle,
-  color,
-  space,
-  variant,
-} from "styled-system";
+import { buttonStyle, variant } from "styled-system";
 import styled from "../../styled-components";
 import { defaultTheme, ITheme } from "../../theme";
 
