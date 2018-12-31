@@ -74,8 +74,8 @@ export default class Alert extends React.Component<IAlertProps, IAlertState> {
         theme={this.props.theme}
         dismissible={this.props.dismissible}
       >
-        {this.props.children}
         {dismissBtn}
+        {this.props.children}
       </AlertStyled>
     ) : (
       ""
